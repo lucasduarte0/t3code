@@ -53,6 +53,8 @@ import { PreviewControlsToolkit } from "./toolkits/previewControls/tools.ts";
 import * as PreviewControlsHandlers from "./toolkits/previewControls/handlers.ts";
 import { EnvironmentToolkit } from "./toolkits/environment/tools.ts";
 import * as EnvironmentHandlers from "./toolkits/environment/handlers.ts";
+import { UsageToolkit } from "./toolkits/usage/tools.ts";
+import * as UsageHandlers from "./toolkits/usage/handlers.ts";
 import { ThemeToolkit } from "./toolkits/theme/tools.ts";
 import * as ThemeHandlers from "./toolkits/theme/handlers.ts";
 import { ProjectToolkit } from "./toolkits/project/tools.ts";
@@ -1351,6 +1353,7 @@ export const layerTools = Layer.mergeAll(
   layerProjectRegistration,
   layerEnvironmentToolkit,
   layerThemeToolkit,
+  toolkitRegistration(UsageToolkit, UsageHandlers.layer),
   layerPreviewControlsRegistration,
   layerWorktreeToolkitRegistration,
   layerPullRequestsToolkit,
